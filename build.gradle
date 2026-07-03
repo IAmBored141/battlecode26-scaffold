@@ -342,7 +342,7 @@ task runPyLocal(type: Exec, dependsOn: installPyLocal) {
 
 task runPy(type: Exec) {
   mustRunAfter downloadPyPackage
-  commandLine python, '-m', 'battlecode26',
+  commandLine python, ' -m', 'battlecode26',
     '--teamA', project.findProperty('languageA') == 'python' ? project.property('teamA') : '/',
     '--teamB', project.findProperty('languageB') == 'python' ? project.property('teamB') : '/',
     '--dirA', botDirectory.absolutePath,

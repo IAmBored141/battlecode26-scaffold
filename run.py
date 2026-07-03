@@ -12,9 +12,9 @@ from pathlib import Path
 
 
 # Check python version
-REQUIRED_PYTHON_VERSION = (3, 12)
-if sys.version_info[:2] != REQUIRED_PYTHON_VERSION:
-    raise RuntimeError(f"Python {REQUIRED_PYTHON_VERSION[0]}.{REQUIRED_PYTHON_VERSION[1]} is required.")
+#REQUIRED_PYTHON_VERSION = (3, 12)
+#if sys.version_info[:2] != REQUIRED_PYTHON_VERSION:
+#    raise RuntimeError(f"Python {REQUIRED_PYTHON_VERSION[0]}.{REQUIRED_PYTHON_VERSION[1]} is required.")
 
 
 # Set client platform
@@ -189,7 +189,7 @@ def install_current_version(ver_data, args):
 
     try:
         from importlib.metadata import version
-        local_version = version("battlecode26")
+        local_version = version("battlecode26-scaffold")
     except Exception as e:
         print(f"Failed to get local package version: {e}")
     
